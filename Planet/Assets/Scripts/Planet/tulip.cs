@@ -5,25 +5,28 @@ using UnityEngine;
 public class tulip : MonoBehaviour
 {
     MeshRenderer meshRenderer;
+    public bool isWalked;
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
     }
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        meshRenderer.material.color = new Color(1,1,1);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        meshRenderer.material.color = new Color(0, 1, 1);
-        Debug.Log("touch");
+        if (!isWalked)
+        {
+            float randomRed;
+            randomRed = Random.Range(0, 1f);
+            float randomGreen;
+            randomGreen = Random.Range(0, 1f);
+            float randomBlue;
+            randomBlue = Random.Range(0, 1f);
+            meshRenderer.material.color = new Color(randomRed, randomGreen, randomBlue);
+            isWalked = true;
+        }
     }
 }
