@@ -29,7 +29,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         
-        CheckGravity();
+        
         
         if (SystemInfo.supportsGyroscope)
         {
@@ -43,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         {
             CheckMoving();
         }
+        CheckGravity();
     }
     void CheckGravity()
     {
@@ -96,10 +97,15 @@ public class PlayerControl : MonoBehaviour
         {
             rb.velocity -= new Vector3(0, rb.velocity.y, 0);
         }
+        //if(!Input.GetKey(KeyCode.A)&& !Input.GetKey(KeyCode.W)&& !Input.GetKey(KeyCode.D)&& !Input.GetKey(KeyCode.S))
+        //{
+        //    StopMoving();
+        //}
     }
     void StopMoving()
     {
         rb.velocity = Vector3.zero;
+        Debug.Log("Stop");
     }
 }
 
