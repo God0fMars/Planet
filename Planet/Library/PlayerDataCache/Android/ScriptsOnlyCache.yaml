@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - CameraControl
     - Player
     - PlayerControl
+    - tulip
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -49,11 +50,13 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 19642}
+      Script: {instanceID: 2128}
     - Class: 114
-      Script: {instanceID: 23700}
+      Script: {instanceID: 2396}
     - Class: 114
-      Script: {instanceID: 31204}
+      Script: {instanceID: 2886}
+    - Class: 114
+      Script: {instanceID: 3686}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -161,6 +164,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 8f1eaeb1ee07e10e2778807d00004591
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -171,6 +180,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 31c606237973ef0a8283dc1577c5c29a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tulip
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -279,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: e03d7efce21abacc9df6909657628421
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerControl
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -419,6 +440,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 66bca5cc6a18c5298ec75235e56a84d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraControl
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -483,25 +510,7 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 5f0ed2a4a014e9a9e474930bba9a7099
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerControl
-  - hash:
-      serializedVersion: 2
-      Hash: 8f1eaeb1ee07e10e2778807d00004591
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
-  - hash:
-      serializedVersion: 2
-      Hash: 66bca5cc6a18c5298ec75235e56a84d6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraControl
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Work/Planet/Planet/Builds/First/Planet.apk
+  playerPath: E:/Work/planetgit/Planet/Builds/colorPlanet.apk

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public GameObject brush;
+    public GameObject paints;
     public float moveSpeed;
     public float rotateSpeed;
     public float gravity;
@@ -23,13 +25,14 @@ public class PlayerControl : MonoBehaviour
             Input.gyro.enabled = true;
             gravity = 0.2f;
         }
+        //lineRenderer.SetColors(Color.red, Color.yellow);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+
         
         if (SystemInfo.supportsGyroscope)
         {
@@ -101,11 +104,48 @@ public class PlayerControl : MonoBehaviour
         //{
         //    StopMoving();
         //}
+
+
+
+        //if (rb.velocity.magnitude > 1f)
+        //{
+        //    Draw();
+        //}
     }
     void StopMoving()
     {
         rb.velocity = Vector3.zero;
         Debug.Log("Stop");
+    }
+    void Draw()
+    {
+        //points.Add(transform.position);
+        //lineRenderer.positionCount = points.Count;
+        //lineRenderer.SetPositions(points.ToArray());
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        var go = Instantiate(brush, collision.contacts[0].point + (transform.position - planet.transform.position) * 0.01f, collision.transform.parent.transform.parent.transform.rotation);
+        go.transform.parent = paints.transform;
+        //if (collision.transform.parent.CompareTag("Hexagon"))
+        //{
+        //    Debug.Log(collision.transform.parent.transform.rotation.eulerAngles);
+        //    var go = Instantiate(brush, collision.contacts[0].point + Vector3.up * 0.01f, Quaternion.Euler(
+        //        collision.transform.parent.transform.localEulerAngles.x
+        //        , collision.transform.parent.transform.localEulerAngles.y
+        //        , collision.transform.parent.transform.localEulerAngles.z)
+        //        );
+        //    go.transform.parent = paints.transform;
+        //}
+        //else if (collision.transform.parent.CompareTag("pentagon"))
+        //{
+            
+        //}
+        //Debug.Log(collision.contacts[0].point);
+        //var go = Instantiate(brush, collision.contacts[0].point + Vector3.up * 0.01f, transform.rotation);
+
+
+
     }
 }
 
