@@ -16,7 +16,7 @@ public class ChangeMaterial : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
         Debug.Log("touched");
         if (col.gameObject.tag =="Flower")
