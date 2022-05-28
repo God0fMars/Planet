@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public GameObject brush;
+    //public GameObject brush;
     public GameObject paints;
     public float moveSpeed;
     public float rotateSpeed;
@@ -123,7 +123,7 @@ public class PlayerControl : MonoBehaviour
         //lineRenderer.positionCount = points.Count;
         //lineRenderer.SetPositions(points.ToArray());
     }
-    private void OnCollisionStay(Collision collision)
+    /*private void OnCollisionStay(Collision collision)
     {
         var go = Instantiate(brush, collision.contacts[0].point + (transform.position - planet.transform.position) * 0.01f, collision.transform.parent.transform.parent.transform.rotation);
         go.transform.parent = paints.transform;
@@ -146,6 +146,6 @@ public class PlayerControl : MonoBehaviour
 
 
 
-    }
+    }*/
 }
 

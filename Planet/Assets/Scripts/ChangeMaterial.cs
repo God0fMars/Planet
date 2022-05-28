@@ -5,6 +5,9 @@ using UnityEngine;
 public class ChangeMaterial : MonoBehaviour
 {
     public Material[]material;
+    public GameObject[] leaf;
+    public GameObject[] petal;
+    public GameObject[] stalk;
     Renderer rend;
 
     // Start is called before the first frame update
@@ -16,16 +19,36 @@ public class ChangeMaterial : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerEnter(Collision col)
+    void OnTriggerEnter(Collider col)
     {
-        Debug.Log("touched");
-        if (col.gameObject.tag =="Flower")
+        
+        if (col.CompareTag("Player"))
         {
-            rend.sharedMaterial = material[1];
+            Invoke("StalkChange", 0.5f);   
         }
-        else
+    }
+    void StalkChange()
+    {
+        for (int i = 0; i < stalk.Length; i++)
         {
-            rend.sharedMaterial = material[2];
+            stalk[i].GetComponent<Renderer>().sharedMaterial = material[2];
         }
+        Invoke("LeafChange", 0.5f);
+    }
+    void LeafChange()
+    {
+        for (int i = 0; i < leaf.Length; i++)
+        {
+            leaf[i].GetComponent<Renderer>().sharedMaterial = material[1];
+        }
+        Invoke("FlowerChange", 0.5f);
+    }
+    void FlowerChange()
+    {
+        for (int i = 0; i < petal.Length; i++)
+        {
+            petal[i].GetComponent<Renderer>().sharedMaterial = material[0];
+        }
+
     }
 }
