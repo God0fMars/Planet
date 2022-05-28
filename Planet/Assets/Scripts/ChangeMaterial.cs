@@ -16,9 +16,10 @@ public class ChangeMaterial : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision col)
+    void OnTriggerEnter(Collision col)
     {
-        if (col.gameObject.tag =="Box")
+        Debug.Log("touched");
+        if (col.gameObject.tag =="Flower")
         {
             rend.sharedMaterial = material[1];
         }
