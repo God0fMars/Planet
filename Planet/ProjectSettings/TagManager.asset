@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pentagon
   - Hexagon
+  - Flower
   layers:
   - Default
   - TransparentFX
