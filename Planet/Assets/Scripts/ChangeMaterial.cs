@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ChangeMaterial : MonoBehaviour
 {
+    GameManagerControl GMControl;
     public Material[]material;
     public GameObject[] leaf;
     public GameObject[] petal;
     public GameObject[] stalk;
     Renderer rend;
+    bool isColorChanged;
+    private void Awake()
+    {
+        GMControl = FindObjectOfType<GameManagerControl>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +27,10 @@ public class ChangeMaterial : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter(Collider col)
     {
-        
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && isColorChanged == false)
         {
-            Invoke("StalkChange", 0.5f);   
+            Invoke("StalkChange", 0.5f);
+            isColorChanged = true;
         }
     }
     void StalkChange()
@@ -49,6 +55,6 @@ public class ChangeMaterial : MonoBehaviour
         {
             petal[i].GetComponent<Renderer>().sharedMaterial = material[0];
         }
-
+        GMControl.TouchedFlower();
     }
 }

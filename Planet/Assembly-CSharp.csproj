@@ -53,15 +53,18 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\RemptyTool\MessageSystem\Scripts\ES_MessageSystem.cs" />
+    <Compile Include="Assets\Scripts\GM\GameManagerControl.cs" />
     <Compile Include="Assets\Scripts\Planet\tulip.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
-    <Compile Include="Assets\Scripts\ChangeMaterial.cs" />
-    <Compile Include="Assets\RemptyTool\MessageSystem\Scripts\ES_MessageSystem.cs" />
     <Compile Include="Assets\RemptyTool\MessageSystem\Scripts\UsageCase.cs" />
+    <Compile Include="Assets\Scripts\ChangeMaterial.cs" />
+    <Compile Include="Assets\Scripts\GM\GameManagerModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SKYBOX\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\RemptyTool\MessageSystem\textfile.txt" />
+    <None Include="Assets\RemptyTool\MessageSystem\End.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
